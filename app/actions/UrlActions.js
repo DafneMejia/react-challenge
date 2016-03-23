@@ -4,13 +4,13 @@ module.exports = {
   createTiny:function(url){
     dispatcher.dispatch({
       url:url,
-      type:"url:createTiny"
+      actionType:"url:createTiny"
     });
   },
   deleteURL:function(url){
     dispatcher.dispatch({
       url:url,
-      type:"url:deleteURL"
+      actionType:"url:deleteURL"
     });
   }
 }
