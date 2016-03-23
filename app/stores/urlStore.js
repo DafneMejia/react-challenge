@@ -38,7 +38,7 @@ function UrlStore() {
     }
 
     dispatcher.register(function (payload) {
-        var split = payload.type.split(":");
+        var split = payload.actionType.split(":");
         if (split[0] === "url") {
             switch (split[1]) {
                 case "createTiny":
