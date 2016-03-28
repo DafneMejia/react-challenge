@@ -1,16 +1,18 @@
 # react-challenge
 TinyURL implementation with react, express.js, node.js and mongoose (mongodb)
 
-##Requirements
+## Requirements
 You must have an instance of mongodb running.
 
-##Install
+## Install
 For execution, run the following commands
 
-```npm install
+```
+npm install
 gulp
 ```
-##Start
+
+## Start
 If you have nodemon installed execute the following command in order to start the application
 ```
 nodemon ./server/server.js
