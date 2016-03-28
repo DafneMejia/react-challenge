@@ -1,27 +1,25 @@
 var React = require("react");
 var UrlInfo = require("./UrlInfo.jsx");
 var CreateTiny = require("./CreateTiny.jsx");
+var ReactPropTypes = React.PropTypes;
 
 module.exports = React.createClass({
+
+  propTypes:{
+    allUrls : ReactPropTypes.object.isRequired
+  },
+
    render:function(){
+      var allUrls = this.props.allUrls;
+      var urls = [];
+
+      for(var key in allUrls){
+        urls.push(<UrlInfo key={key} info={allUrls[key]} />);
+      }
        return(
-          <div>
-            <CreateTiny />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="col-lg-6 col-lg-offset-3">
-                    {
-                        this.props.url.map(function(u,index){
-                              return(
-                                  <UrlInfo info={u} key={"url"+index} />
-                              )
-                          })
-                      }
-                  </div>
-             </div>
+          <div className="col-lg-6 col-lg-offset-3">
+            {urls}
+          </div>
        )
    }
 });
